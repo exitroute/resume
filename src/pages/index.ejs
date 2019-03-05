@@ -1,16 +1,49 @@
----
-title: EJS Page
----
-<h1>EJS Page!</h1>
+<!-- 
+  Jumbotron
+  Hardcoded Name and Subtitle
 
-<p>Here are some variables: <%= site.title %> </p>
+  ./resume.json
+    quote
 
-<h2>Projects</h2>
+  About
+  Hard code heading and subtitle 
 
-<p>The data below is coming from a JSON file.</p>
+  ./resume.json
+    description  
+  # add table later 
+-->
+<%- include('./about') %>
 
-<ul>
-  <% site.projects.forEach((project) => { %>
-    <li><a href="<%= project.url %>"><%= project.name %></a></li>
-  <% }) %>
-</ul>
+<!-- 
+  Skills and Tools 
+  Hard code heading and subtitle 
+  
+  ./resume.json
+    description: String  
+      skillName: String
+      skillDescriptors: Array
+      skillDescription: String 
+
+-->
+<%- include('./skillsAndTools') %>
+
+<!-- 
+  Recent Work
+  Hard code heading and subtitle 
+
+  ./resume.json
+    description: String  
+    
+    detailName: String
+    detailDescription: String
+    detailDate: Date
+
+-->
+<%- include('./recentWork') %>
+
+<!-- Management Experience -->
+<%- include('./managementExperience') %>
+
+
+<!-- Education and Training -->
+<%- include('./educationAndTraining') %>
