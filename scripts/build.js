@@ -11,11 +11,11 @@ const srcPath = "./src";
 const distPath = "./public";
 
 
-// clear destination folder
-fse.emptyDirSync(distPath);
+// // clear destination folder
+// fse.emptyDirSync(distPath);
 
-// copy assest folder
-fse.copy(`${srcPath}/assets`, `${distPath}/assets`);
+// // copy assest folder
+// fse.copy(`${srcPath}/assets`, `${distPath}/assets`);
 
 
 // read page templates

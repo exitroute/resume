@@ -1,0 +1,31 @@
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+
+.my-green-bg {
+  background-color: $mygreen;
+}
+
+.card-text {
+  font-size: small;
+}
+
+.man-exp-highlight {   
+  font-style: italic;
+}
+
+ul {
+  padding-left: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+  
+  div > h5,
+  .man-exp-text,
+  .text-wse {
+    font-size: small;
+  }
+}
+
+ul.man-exp-highlight {
+  padding: 0;
+}
