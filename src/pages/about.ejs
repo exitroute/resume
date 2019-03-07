@@ -5,32 +5,19 @@
     </h2>
   </div>
   <div class="col-12 col-md-8">
-    <%- site.resume[0].about.description.html %>
-    <dl class="row">
-      <dt class="col-4">
-        New Career
-      </dt>
-      <dd class="col-8">
-        Web Development
-        <br>
-        <i>- since May 2018</i>
-      </dd>
-      <dt class="col-4">
-        Previous Career
-      </dt>
-      <dd class="col-8">
-        Language School Mangement
-        <br>
-        <i>- a decade of experience</i>
-      </dd>
-      <dt class="col-4">
-        Studied
-      </dt>
-      <dd class="col-8">
-        Architecture
-        <br>
-        <i>- BSc University of Strathclyde </i>
-      </dd>
-    </dl>
+    <%- site.resume.about.description.html %>
+
+      <dl class="row">
+        <% site.resume.about.overview.forEach((entry) => { %>
+          <dt class="col-4">
+            <%= entry.stage %>
+          </dt>
+          <dd class="col-8">
+            <%= entry.name %>
+              <br>
+              <%= entry.detail %>
+          </dd>
+          <% }); %>
+      </dl>
   </div>
 </section>
