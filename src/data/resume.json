@@ -190,7 +190,7 @@
         "position": "<b>School and Service Manager</b><br>",
         "organisation": "WSI Education GmbH<br>",
         "location": "Berlin, WSE Charlottenburg and Schöneberg<br>",
-        "highlight": "<class=\"man-exp-highlight\"><li>Full-time manager in two schools</li><li>20 staff, 800 students.</li></ul>"
+        "highlight": "<ul class=\"man-exp-highlight list-unstyled\"><li>Full-time manager in two schools</li><li>20 staff, 800 students.</li></ul>"
       },
       {
         "name": "I",
@@ -199,7 +199,7 @@
         "position": "<b>School and Service Manager</b><br>",
         "organisation": "Pro Education GmbH<br>",
         "location": "Berlin, WSE Charlottenburg, Steglitz and Schöneberg",
-        "highlight": "<ul class=\"man-exp-highlight\"><li>Best WSE School Manager in 2007</li><li>Best WSE School in 2006 and 2005</li><li>Opened and Managed WSE Steglitz &amp; Schöneberg in 2008</li></ul>"
+        "highlight": "<ul class=\"man-exp-highlight list-unstyled\"><li>Best WSE School Manager in 2007</li><li>Best WSE School in 2006 and 2005</li><li>Opened and Managed WSE Steglitz &amp; Schöneberg in 2008</li></ul>"
       }
     ],
     "tasksAndResponsibilities": [
