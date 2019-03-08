@@ -204,12 +204,57 @@
     ],
     "tasksAndResponsibilities": [
       {
-        "name": "",
-        "id": "",
+        "name": "Learning and Development",
+        "id": "learningAndDevelopment",
         "details": [
-          "detailOne",
-          "detailTwo"
+          "<b>Responsibilities:</b> staff development, continuous improvement, staff onboarding, new product and process training, L&amp;D objectives, school culture.",
+          "<b>Used</b> Pearson LMS, performance reviews, SMART goals, coaching, mentoring, workshops and meetings,service design thinking and sprints.."
         ]
+      },
+      {
+        "name": "Recruitment",
+        "id": "recruitment",
+        "details": [
+          "<b>Responsibilities:</b> candidate experience, profile development, resume screening, 1st and 2nd interviews, final selection, candidate feedback.",
+          "<b>Recruited</b> and hired 50 staff members (teachers, trainers and service support)."
+        ]
+      },
+      {
+        "name": "Community and Culture",
+        "id": "community",
+        "details": [
+          "<b>Responsibilities:</b> weekly, monthly and annual in-centre and out-centre events; centre level social media (deleted Jan 2017); and newsletters."
+        ]
+      },
+      {
+        "name": "Customer Success and Experience",
+        "id": "customer",
+        "details": [
+          "<b>Responsibilities:</b> customers meeting learning objectives.",
+          "<b>Led</b> the service department, set and tracked onboarding and follow up objectives, 121 troubleshooting, service development and design, scheduled and planned by the month, quarter and year."
+        ]
+      },
+      {
+        "name": "Compliance and Reporting",
+        "id": "reporting",
+        "details": [
+          "<b>Responsibilities:</b> inventory, learner and service KPI, QMS analysis, implementing Pearson policies (efficacy, anti-corruption anti-discrimination), preparing and passing external audits for Arbeitsagentur, GutCert, and Pearson"
+        ]
+      },
+      {
+        "name": "Teaching",
+        "id": "teaching",
+        "details": [
+          "<b>Led</b> the line by acting as the senior teacher at the school developing lesson and course plans, and testing material.",
+          "<b>Taught</b> in-company group, standard and customised courses of across Berlin, Brandenburg, Saxony.",
+          "<b>Customers:</b> Siemens, Nokia, Berlin Partner, Landesbank Brandenburg, Sodexo, Takraf Tenova, Fyber, Sparkasse, Mercedes Benz Bank, Netto, Rieck Logistics."
+        ]
+      },
+      {
+        "name": "Sales",
+        "id": "sales",
+        "details": [
+          "<b>Responsible</b> for meeting 30% - 50% of centre sales target through B2C contract renewals and referrals."        ]
       }
     ]
   },
