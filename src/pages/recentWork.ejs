@@ -21,196 +21,62 @@
       </p>
     </div>
     <div class="col-12 col-md-8">
-      <p class="mb-4">
-        From July 2016 until May 2018, Ryan took time to discover the right path for the next chapter of his working life.
-      </p>
-      <p>
-        He discovered that the struggle was real, and his future lay in new skills.
-      </p>
 
-      <!--accordion start-->
-      <div class="row">
-        <div class="col">
-          <div class="accordion" id="recentwork-list">
-            <div class="card rounded-0">
-              <div class="card-header my-green-bg my-green-bg" id="enterprise">
-                <h5 class="mb-0">
-                  <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#collapseEnterprise" aria-expanded="true"
-                    aria-controls="collapseEnterprise">
-                    Enterprise
-                  </button>
-                </h5>
-              </div>
+      <%- site.resume.recentWork.description.html %>
 
-              <div id="collapseEnterprise" class="collapse show" aria-labelledby="enterprise" data-parent="#recentwork-list" style="">
-                <div class="card-body">
-                  <ul>
-                    <li>
-                      <b>Founded</b> language training business
-                      <a href="https.//eigenenglish.de" target="_blank">EigenEnglish</a> in Berlin.
-                    </li>
-                    <ul>
-                      <li>
-                        <i>
-                          January 2018 to June 2018
-                        </i>
-                      </li>
-                    </ul>
-                    <li>
-                      <b>Co-Founded</b> language service
-                      <a href="https://www.lostintranslation.de">Lost In Translation</a> in Hamburg.
-                    </li>
-                    <ul>
-                      <li>
-                        <i>
-                          July 2017 to December 2017
-                        </i>
-                      </li>
-                    </ul>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header my-green-bg" id="learningandtraining">
-                <h5 class="mb-0">
-                  <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseLearningAndTraining"
-                    aria-expanded="false" aria-controls="collapseLearningAndTraining">
-                    Learning and Training
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseLearningAndTraining" class="collapse" aria-labelledby="learningandtraining" data-parent="#recentwork-list"
-                style="">
-                <div class="card-body">
-                  <ul>
-                    <li>
-                      <b>Learning</b> web development at
-                      <a href="https://www.digitalcareerinstitute.de">
-                        Digital Career Institute</a>, Berlin.
-                      <br> Ethereum and Solidiy.
-                      <br>
-                    </li>
-                    <ul>
-                      <li>
-                        <i>
-                          from May 2018
-                        </i>
-                      </li>
-                    </ul>
-                    <li>
-                      <b>Completed</b> the Foundations of Learner Experience Design with NovoEd: learn.novoed.com
-                    </li>
-                    <ul>
-                      <li>
-                        <i>
-                          April to June 2018
-                        </i>
-                      </li>
-                    </ul>
-                    <li>
-                      <b>Trained</b> German to B2 with GLS Berlin
-                    </li>
-                    <ul>
-                      <li>
-                        September to November 2017
-                      </li>
-                    </ul>
-                  </ul>
+        <!--accordion start-->
+        <div class="row">
+          <div class="col">
+            <div class="accordion" id="recentwork-list">
 
+              <% site.resume.recentWork.activities.forEach((activity, index) => { %>
+
+                <div class="card rounded-0">
+                  <div 
+                    class="card-header my-green-bg" 
+                    id"<%= activity.id %>">
+                    <h5 class="mb-0">
+                      <button 
+                        class="btn btn-link text-white" 
+                        type="button" 
+                        data-toggle="collapse" 
+                        data-target="#<%= activity.id %>Collapse" 
+                        aria-expanded="<%= index !== 0 ? false : true %>"  
+                        aria-controls="<%= activity.id %>Collapse">
+                        <%= activity.name %>
+                      </button>
+                    </h5>
+                  </div>
+                  <div 
+                    id="<%= activity.id %>Collapse" 
+                    class="<%= index === 0 ? 'collapse show' : 'collapse' %>" 
+                    aria-labelledby="<%= activity.id %>" data-parent="#recentwork-list" 
+                    style="">
+                    <div class="card-body">
+                      <% activity.details.forEach((detail) => { %>
+                        <ul>
+                          <li>
+                            <%- detail.description %>
+                          </li>
+                          <ul>
+                            <li>
+                              <i>
+                                <%- detail.date %>
+                              </i>
+                            </li>
+                          </ul>
+                        </ul>
+                        <% }) %>
+                    </div>
+                  </div>
                 </div>
-              </div>
+                <% }); %>
             </div>
-            <div class="card">
-              <div class="card-header my-green-bg" id="production">
-                <h5 class="mb-0">
-                  <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseProduction"
-                    aria-expanded="false" aria-controls="collapseProduction">
-                    Production
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseProduction" class="collapse" aria-labelledby="production" data-parent="#recentwork-list" style="">
-                <div class="card-body">
-                  <ul>
-                    <li>
-                      <b>Created and produced</b> the
-                      <a href="https://www.facebook.com/pg/route.exit/photos/?ref=page_internal" target="_blank">
-                        “Exit Through the Language School”</a> series of events.
-                    </li>
-                    <ul>
-                      <li>
-                        Sourced and curated 24 contributors,
-                        <br> produced and managed social media content,
-                        <br> marketing materials and mailchimp newsletters.
-                      </li>
-                      <li>
-                        <i>
-                          July - December 2016
-                        </i>
-                      </li>
-                    </ul>
-                    <li>
-                      <b>Performed</b> live video mixing with
-                      <a href="https://www.instagram.com/p/BmrMID4AY3r/?taken-by=theinstanttigers" target="_blank">The Instant Tigers</a>
-                    </li>
-                    <ul>
-                      <li>
-                        <i>
-                          since October 2017
-                        </i>
-                      </li>
-                    </ul>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="card rounded-0">
-              <div class="card-header my-green-bg" id="self-development">
-                <h5 class="mb-0">
-                  <button class="btn text-white btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSelfDevelopment"
-                    aria-expanded="false" aria-controls="collapseSelfDevelopment">
-                    Self Development
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseSelfDevelopment" class="collapse" aria-labelledby="self-development" data-parent="#recentwork-list" style="">
-                <div class="card-body">
-                  <ul>
-                    <li>
-                      <b>
-                        Created
-                      </b>
-                      <a href="https://www.exitroute.org" target="_blank">
-                        exitroute.org </a> workshop for on-going LX CX SX design and event projects
-                    </li>
-                    <ul>
-                      <li>
-                        <i>
-                          since January 2017
-                        </i>
-                      </li>
-                    </ul>
-                    <li>
-                      <b>Completed</b> 2,000km unsupported bicycle trip from Berlin to Barcelona in 28 days.
-                    </li>
-                    <ul>
-                      <li>
-                        <i>
-                          June 2017
-                        </i>
-                      </li>
-                    </ul>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <!--/.accordian-->
           </div>
-          <!--/.accordian-->
+          <!--/.column-->
         </div>
-        <!--/.column-->
-      </div>
-      <!--/.row-->
+        <!--/.row-->
     </div>
     <!-- /.column-->
   </div>
