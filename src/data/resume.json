@@ -95,11 +95,12 @@
   },
   "recentWork": {
     "description": {
-      "html": "From July 2016 until May 2018, Ryan took time to discover the right path for the next chapter of his working life.</p><p>He discovered that the struggle was real, and his future lay in new skills.</p>"
+      "html": "<p class=\"mb-4\">From July 2016 until May 2018, Ryan took time to discover the right path for the next chapter of his working life.</p><p>He discovered that the struggle was real, and which skills he needed for the next phase of his working life.</p>"
     },
     "activities": [
       {
         "name": "Enterprise",
+        "id": "enterprise",
         "details": [
           {
             "description": "<b>Founded</b>language training business",
@@ -113,6 +114,7 @@
       },
       {
         "name": "Learning and Training",
+        "id": "learningAndTraining",
         "details": [
           {
             "description": "<b>Learning</b> web development at <a href=\"https://www.digitalcareerinstitute.de\">Digital Career Institute</a>, Berlin.",
@@ -130,6 +132,7 @@
       },
       {
         "name": "Production",
+        "id": "production",
         "details": [
           {
             "description": "<b>Created and produced</b> the <a href=\"https://www.facebook.com/pg/route.exit/photos/?ref=page_internal\" target=\"_blank\">“Exit Through the Language School”</a> series of events.",
@@ -143,6 +146,7 @@
       },
       {
         "name": "Self Development",
+        "id": "selfDevelopment",
         "details": [
           {
             "description": "<b>Created</b> <a  href=\"https://www.exitroute.org\" target=\"_blank\">exitroute.org</a>: a workshop for on-going LX CX SX design and event projects",
