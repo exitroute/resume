@@ -23,7 +23,6 @@
   
     <div class="col-12 col-md-8">
       <%- site.resume.recentWork.description.html %>
-        <!--accordion start-->
         <div class="row">
           <div class="col">
             <div class="accordion" id="recentwork-list">
@@ -49,9 +48,9 @@
                     class="<%= index === 0 ? 'collapse show' : 'collapse' %>" 
                     aria-labelledby="<%= activity.id %>" 
                     data-parent="#recentwork-list" >
-                    <div class="card-body">
+                    <div class="card-body small">
                       <% activity.details.forEach((detail) => { %>
-                        <ul>
+                        <ul class="list-unstyled">
                           <li>
                             <%- detail.description %>
                           </li>
@@ -69,13 +68,8 @@
                 </div>
                 <% }); %>
             </div>
-            <!--/.accordian-->
           </div>
-          <!--/.column-->
         </div>
-        <!--/.row-->
     </div>
-    <!-- /.column-->
   </div>
-  <!-- /.row-->
 </section>

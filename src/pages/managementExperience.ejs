@@ -19,11 +19,11 @@
       </p>
     </div>
     <div class="col-12 col-md-8">
-      <% const manExp = site.resume.managementExperience %> <%-
-      manExp.description.html %>
+
+      <% const manExp = site.resume.managementExperience %> 
+      <%-manExp.description.html %>
 
       <div class="row man-exp-row justify-content-center mb-5">
-        <!-- List group -->
         <div class="col-sm-2 col-3">
           <div class="list-group text-center" id="listManExp" role="tablist">
             <% manExp.chapters.forEach((chapter, index, arr) => { %>
@@ -46,14 +46,12 @@
           </div>
         </div>
 
-        <!-- Tab panes -->
         <div class="col-8">
           <div class="tab-content">
             <% manExp.chapters.forEach((chapter, index, arr) => { %>
             <div
-              class="
+              class="<%= index === 0 ? 'active' : '' %>  
                 tab-pane 
-                <%= index === 0 ? 'active' : '' %>  
                 man-exp-text"
               id="<%= chapter.id %>"
               role="tabpanel"
@@ -65,10 +63,8 @@
               <%- chapter.highlight %>
             </div>
             <% }) %>
-            <!-- /.row-->
           </div>
         </div>
-        <!--/.col Tab panes end-->
       </div>
 
       <h3>Tasks and Responsibilities</h3>
@@ -110,8 +106,5 @@
       </div>
       <% }); %>
     </div>
-
-        <!--Accordion-->
   </div>
-  <!-- nest /.col-->
 </section>
