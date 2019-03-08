@@ -162,28 +162,56 @@
   },
   "managementExperience": {
     "description": {
-      "html": "",
-      "summary": [
-        {
-          "date": "",
-          "position": "",
-          "organisation": "",
-          "location": "",
-          "highlight": ""
-        }
-      ]
+      "html": "<p><a href=\"https://www.wallstreetenglish.com\" target=\"_blank\">Wall Street English</a> (WSE) was an elearning and blended learning language teaching service active in Germany from 1995 until December 2016, owned by Pearson Education.</p><p class=\"text-wse\">Approximately, 18,000 English language learners attended the five schools in Berlin from 2001 until 2016, with an annual €2.7m.</p><p class=\"text-wse\">School self-portrait here:<a href=\"https://vimeo.com/81486090\" target=\"_blank\">Berlin Lesson 1.</a></p>"
     },
-    "tasksAndResponsibilities": {
-      "activities": [
-        {
-          "name": "",
-          "details": [
-            "detailOne",
-            "detailTwo"
-          ]
-        }
-      ]
-    }
+    "chapters": [
+      {
+        "name": "IV",
+        "id": "partFour",
+        "date": "<i>February 2014 – December 2016</i><br>",
+        "position": "<b>School and Service Manager</b><br>",
+        "organisation": "Pearson Education<br>",
+        "location": "Berlin, WSE Mitte - Flagship Centre<br>",
+        "highlight": "<span class=\"man-exp-highlight\">Best WSE School Manager<br>Germany<br>2015</span>"
+      },
+      {
+        "name": "III",
+        "id": "partThree",
+        "date": "<i>October 2012 – January 2014</i><br>",
+        "position": "<b>School and Service Manager</b><br>",
+        "organisation": "Pearson Education<br>",
+        "location": "Berlin, Berlin, WSE Charlottenburg<br>",
+        "highlight": "<span class=\"man-exp-highlight\">Awarded 3 month sabbatical.</span>"
+      },
+      {
+        "name": "II",
+        "id": "partTwo",
+        "date": "<i>September 2010 – September 2012</i><br>",
+        "position": "<b>School and Service Manager</b><br>",
+        "organisation": "WSI Education GmbH<br>",
+        "location": "Berlin, WSE Charlottenburg and Schöneberg<br>",
+        "highlight": "<class=\"man-exp-highlight\"><li>Full-time manager in two schools</li><li>20 staff, 800 students.</li></ul>"
+      },
+      {
+        "name": "I",
+        "id": "partOne",
+        "date": "<i>September 2005 – September 2010</i><br>",
+        "position": "<b>School and Service Manager</b><br>",
+        "organisation": "Pro Education GmbH<br>",
+        "location": "Berlin, WSE Charlottenburg, Steglitz and Schöneberg",
+        "highlight": "<ul class=\"man-exp-highlight\"><li>Best WSE School Manager in 2007</li><li>Best WSE School in 2006 and 2005</li><li>Opened and Managed WSE Steglitz &amp; Schöneberg in 2008</li></ul>"
+      }
+    ],
+    "tasksAndResponsibilities": [
+      {
+        "name": "",
+        "id": "",
+        "details": [
+          "detailOne",
+          "detailTwo"
+        ]
+      }
+    ]
   },
   "educationAndTraining": {
     "description": {

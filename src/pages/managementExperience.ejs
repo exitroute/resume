@@ -21,262 +21,222 @@
       </p>
     </div>
     <div class="col-12 col-md-8">
-      <p>
-        <a href="https://www.wallstreetenglish.com" target="_blank">
-          Wall Street English</a> (WSE) was an elearning and blended learning language teaching service active in Germany
-        from 1995 until December 2016, owned by Pearson Education.
-      </p>
-      <p class="text-wse">
-        Approximately, 18,000 English language learners attended the five schools in Berlin from 2001 until 2016, with an annual
-        turnover €2.7m.
-      </p>
-      <p class="text-wse">
-        School self-portrait here:
-        <a href="https://vimeo.com/81486090" target="_blank">Berlin Lesson 1.</a>
-      </p>
+      <% const manExp = site.resume.managementExperience %>
+        <%- manExp.description.html %>
 
-      <div class="row man-exp-row justify-content-center mb-5">
+          <div class="row man-exp-row justify-content-center mb-5">
 
-        <!-- List group -->
-        <div class="col-sm-2 col-3">
-          <div class="list-group text-center" id="listManExp" role="tablist">
-            <a class="list-group-item list-group-item-action rounded-0 active" data-toggle="list" href="#partFour" role="tab">
-              IV
-            </a>
-            <a class="list-group-item list-group-item-action" data-toggle="list" href="#partThree" role="tab">III</a>
-            <a class="list-group-item list-group-item-action" data-toggle="list" href="#partTwo" role="tab">II</a>
-            <a class="list-group-item list-group-item-action rounded-0" data-toggle="list" href="#partOne" role="tab">I</a>
-          </div>
-        </div>
-
-        <!-- Tab panes -->
-        <div class="col-8">
-          <div class="tab-content">
-            <div class="tab-pane active man-exp-text" id="partFour" role="tabpanel">
-              <i>February 2014 – December 2016</i>
-              <br>
-              <b>School and Service Manager</b>
-              <br> Pearson Education
-              <br> Berlin, WSE Mitte - Flagship Centre
-              <br>
-              <hr>
-              <span class="man-exp-highlight">
-                Best WSE School Manager
-                <br>Germany
-                <br>2015
-              </span>
-            </div>
-            <div class="tab-pane man-exp-text" id="partThree" role="tabpanel">
-              <i>October 2012 – January 2014</i>
-              <br>
-              <b>School and Service Manager</b>
-              <br> Pearson Education
-              <br> Berlin, WSE Charlottenburg
-              <br>
-              <hr>
-              <span class="man-exp-highlight">
-                Awarded 3 month sabbatical.
-              </span>
-            </div>
-            <div class="tab-pane man-exp-text" id="partTwo" role="tabpanel">
-              <i>September 2010 – September 2012</i>
-              <br>
-              <b>School and Service Manager</b>
-              <br> Pearson Education
-              <br> Berlin, WSE Charlottenburg and Schöneberg
-              <br>
-              <hr>
-              <ul class="man-exp-highlight">
-                <li>Full-time manager in two schools</li>
-                <li>20 staff, 800 students.</li>
-              </ul>
-            </div>
-            <div class="tab-pane man-exp-text" id="partOne" role="tabpanel">
-              <i>September 2005 – September 2010</i>
-              <br>
-              <b>School and Service Manager</b>
-              <br>Pearson Education
-              <br>Berlin, WSE Charlottenburg, Steglitz and Schöneberg
-              <br>
-              <hr>
-              <ul class="man-exp-highlight">
-                <li>Best WSE School Manager in 2007</li>
-                <li>Best WSE School in 2006 and 2005</li>
-                <li>Opened and Managed WSE Steglitz &amp; Schöneberg in 2008</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!--/.col Tab panes end-->
-      </div>
-      <!-- /.row-->
-
-
-      <h3>Tasks and Responsibilities</h3>
-
-      <!--management tasks accordion-->
-
-      <div class="accordion mb-5" id="listManTasks">
-        <div class="card rounded-0">
-          <div class="card-header my-green-bg" id="learningAndDev">
-            <h5 class="mb-0">
-              <button class="btn btn-link text-white text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseLearningAndDev"
-                aria-expanded="false" aria-controls="collapseLearningAndDev">
-                Learning and Development
-              </button>
-            </h5>
-          </div>
-          <div id="collapseLearningAndDev" class="collapse" aria-labelledby="learningAndDev" data-parent="#listManTasks" style="">
-            <div class="card-body small">
-              <ul>
-                <li>
-                  <b>Responsibilities:</b> staff development, continuous improvement, staff onboarding, new product and process
-                  training, L&amp;D objectives, school culture.
-                </li>
-                <li>
-                  <b>Used</b> Pearson LMS, performance reviews, SMART goals, coaching, mentoring, workshops and meetings, service
-                  design thinking and sprints..
-                </li>
-              </ul>
+            <!-- List group -->
+            <div class="col-sm-2 col-3">
+              <div class="list-group text-center" id="listManExp" role="tablist">
+                <% manExp.chapters.forEach((chapter, index, arr) => { %>
+                  <a class="
+                list-group-item 
+                list-group-item-action 
+                <%= 
+                  index === 0 ? 'rounded-0 active' 
+                  : index === arr.length - 1 ? 'rounded-0'
+                  : '' 
+                  %>" data-toggle="list" href="#<%= chapter.id %>" role="tab">
+                    <%- chapter.name %>
+                  </a>
+                  <% }) %>
+              </div>
             </div>
 
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header my-green-bg" id="recruitment">
-            <h5 class="mb-0">
-              <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseRecruitment"
-                aria-expanded="false" aria-controls="collapseRecruitment">
-                Recruitment
-              </button>
-            </h5>
-          </div>
-          <div id="collapseRecruitment" class="collapse" aria-labelledby="recruitment" data-parent="#listManTasks">
-            <div class="card-body small">
-              <ul>
-                <li>
-                  <b>Responsibilities:</b> candidate experience, profile development, resume screening, 1st and 2nd interviews,
-                  final selection, candidate feedback.
-                </li>
-                <li>
-                  <b>Recruited</b> and hired 50 staff members (teachers, trainers and service support).
-                </li>
-              </ul>
+            <!-- Tab panes -->
+            <div class="col-8">
+              <div class="tab-content">
+                <% manExp.chapters.forEach((chapter, index, arr) => { %>
+                  <div class="
+                tab-pane 
+                <%= index === 0 ? 'active' : '' %>  
+                man-exp-text" id="<%= chapter.id %>" role="tabpanel">
+                    <%- chapter.date %>
+                      <%- chapter.position %>
+                        <%- chapter.organisation %>
+                          <%- chapter.location %>
+                            <br>
+                            <hr>
+                            <%- chapter.highlight %>
+                  </div>
+                  <% }) %>
+              </div>
             </div>
+            <!--/.col Tab panes end-->
           </div>
-        </div>
-        <div class="card">
-          <div class="card-header my-green-bg" id="community">
-            <h5 class="mb-0">
-              <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseCommunity" aria-expanded="false"
-                aria-controls="collapseCommunity">
-                Community and Culture
-              </button>
-            </h5>
-          </div>
-          <div id="collapseCommunity" class="collapse" aria-labelledby="community" data-parent="#listManTasks">
-            <div class="card-body small">
-              <ul>
-                <li>
-                  <b>Responsibilities:</b> weekly, monthly and annual in-centre and out-centre events; centre level social media
-                  (deleted Jan 2017); and newsletters.
-                </li>
-              </ul>
+          <!-- /.row-->
+
+
+          <h3>Tasks and Responsibilities</h3>
+
+          <!--management tasks accordion-->
+          <% 
+        const tasks = manExp.tasksAndResponsibilities; 
+        
+      %>
+
+            <div class="accordion mb-5" id="listManTasks">
+              <div class="card rounded-0">
+                <div class="card-header my-green-bg" id="learningAndDev">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link text-white text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseLearningAndDev"
+                      aria-expanded="false" aria-controls="collapseLearningAndDev">
+                      Learning and Development
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseLearningAndDev" class="collapse" aria-labelledby="learningAndDev" data-parent="#listManTasks" style="">
+                  <div class="card-body small">
+                    <ul>
+                      <li>
+                        <b>Responsibilities:</b> staff development, continuous improvement, staff onboarding, new product and
+                        process training, L&amp;D objectives, school culture.
+                      </li>
+                      <li>
+                        <b>Used</b> Pearson LMS, performance reviews, SMART goals, coaching, mentoring, workshops and meetings,
+                        service design thinking and sprints..
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header my-green-bg" id="recruitment">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseRecruitment"
+                      aria-expanded="false" aria-controls="collapseRecruitment">
+                      Recruitment
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseRecruitment" class="collapse" aria-labelledby="recruitment" data-parent="#listManTasks">
+                  <div class="card-body small">
+                    <ul>
+                      <li>
+                        <b>Responsibilities:</b> candidate experience, profile development, resume screening, 1st and 2nd interviews,
+                        final selection, candidate feedback.
+                      </li>
+                      <li>
+                        <b>Recruited</b> and hired 50 staff members (teachers, trainers and service support).
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header my-green-bg" id="community">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseCommunity" aria-expanded="false"
+                      aria-controls="collapseCommunity">
+                      Community and Culture
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseCommunity" class="collapse" aria-labelledby="community" data-parent="#listManTasks">
+                  <div class="card-body small">
+                    <ul>
+                      <li>
+                        <b>Responsibilities:</b> weekly, monthly and annual in-centre and out-centre events; centre level social
+                        media (deleted Jan 2017); and newsletters.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header my-green-bg" id="customer">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseCustomer" aria-expanded="false"
+                      aria-controls="collapseCustomer">
+                      Customer Success and Experience
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseCustomer" class="collapse" aria-labelledby="customer" data-parent="#listManTasks">
+                  <div class="card-body small">
+                    <ul>
+                      <li>
+                        <b>Responsibilities:</b> customers meeting learning objectives.
+                      </li>
+                      <li>
+                        <b>Led</b> the service department, set and tracked onboarding and follow up objectives, 121 troubleshooting,
+                        service development and design, scheduled and planned by the month, quarter and year.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header my-green-bg" id="reporting">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseReporting" aria-expanded="false"
+                      aria-controls="collapseReporting">
+                      Compliance &amp; Reporting
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseReporting" class="collapse" aria-labelledby="reporting" data-parent="#listManTasks" style="">
+                  <div class="card-body small">
+                    <ul>
+                      <li>
+                        <b>Responsibilities:</b> inventory, learner and service KPI, QMS analysis, implementing Pearson policies
+                        (efficacy, anti-corruption, anti-discrimination), preparing and passing external audits for Arbeitsagentur,
+                        GutCert, and Pearson.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header my-green-bg" id="teaching">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseTeaching" aria-expanded="false"
+                      aria-controls="collapseTeaching">
+                      Teaching
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseTeaching" class="collapse" aria-labelledby="teaching" data-parent="#listManTasks">
+                  <div class="card-body small">
+                    <ul>
+                      <li>
+                        <b>Led</b> the line by acting as the senior teacher at the school, developing lesson and course plans,
+                        and testing material.
+                      </li>
+                      <li>
+                        <b>Taught</b> in-company group, standard and customised courses of across Berlin, Brandenburg, Saxony.
+                      </li>
+                      <li>
+                        <b>Customers:</b> Siemens, Nokia, Berlin Partner, Landesbank Brandenburg, Sodexo, Takraf Tenova, Fyber,
+                        Sparkasse, Mercedes Benz Bank, Netto, Rieck Logistics.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card rounded-0">
+                <div class="card-header my-green-bg" id="sales">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseSales" aria-expanded="false"
+                      aria-controls="collapseSales">
+                      Sales
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseSales" class="collapse" aria-labelledby="sales" data-parent="#listManTasks">
+                  <div class="card-body small">
+                    <ul>
+                      <li>
+                        <b>Responsible</b> for meeting 30% - 50% of centre sales target through B2C contract renewals and referrals.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header my-green-bg" id="customer">
-            <h5 class="mb-0">
-              <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseCustomer" aria-expanded="false"
-                aria-controls="collapseCustomer">
-                Customer Success and Experience
-              </button>
-            </h5>
-          </div>
-          <div id="collapseCustomer" class="collapse" aria-labelledby="customer" data-parent="#listManTasks">
-            <div class="card-body small">
-              <ul>
-                <li>
-                  <b>Responsibilities:</b> customers meeting learning objectives.
-                </li>
-                <li>
-                  <b>Led</b> the service department, set and tracked onboarding and follow up objectives, 121 troubleshooting,
-                  service development and design, scheduled and planned by the month, quarter and year.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header my-green-bg" id="reporting">
-            <h5 class="mb-0">
-              <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseReporting" aria-expanded="false"
-                aria-controls="collapseReporting">
-                Compliance &amp; Reporting
-              </button>
-            </h5>
-          </div>
-          <div id="collapseReporting" class="collapse" aria-labelledby="reporting" data-parent="#listManTasks" style="">
-            <div class="card-body small">
-              <ul>
-                <li>
-                  <b>Responsibilities:</b> inventory, learner and service KPI, QMS analysis, implementing Pearson policies (efficacy,
-                  anti-corruption, anti-discrimination), preparing and passing external audits for Arbeitsagentur, GutCert,
-                  and Pearson.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header my-green-bg" id="teaching">
-            <h5 class="mb-0">
-              <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseTeaching" aria-expanded="false"
-                aria-controls="collapseTeaching">
-                Teaching
-              </button>
-            </h5>
-          </div>
-          <div id="collapseTeaching" class="collapse" aria-labelledby="teaching" data-parent="#listManTasks">
-            <div class="card-body small">
-              <ul>
-                <li>
-                  <b>Led</b> the line by acting as the senior teacher at the school, developing lesson and course plans, and
-                  testing material.
-                </li>
-                <li>
-                  <b>Taught</b> in-company group, standard and customised courses of across Berlin, Brandenburg, Saxony.
-                </li>
-                <li>
-                  <b>Customers:</b> Siemens, Nokia, Berlin Partner, Landesbank Brandenburg, Sodexo, Takraf Tenova, Fyber, Sparkasse,
-                  Mercedes Benz Bank, Netto, Rieck Logistics.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="card rounded-0">
-          <div class="card-header my-green-bg" id="sales">
-            <h5 class="mb-0">
-              <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseSales" aria-expanded="false"
-                aria-controls="collapseSales">
-                Sales
-              </button>
-            </h5>
-          </div>
-          <div id="collapseSales" class="collapse" aria-labelledby="sales" data-parent="#listManTasks">
-            <div class="card-body small">
-              <ul>
-                <li>
-                  <b>Responsible</b> for meeting 30% - 50% of centre sales target through B2C contract renewals and referrals.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--Accordion-->
+            <!--Accordion-->
     </div>
     <!-- nest /.col-->
   </div>
