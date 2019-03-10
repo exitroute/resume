@@ -260,17 +260,39 @@
   },
   "educationAndTraining": {
     "description": {
-      "html": ""
+      "html": "<p>From an education in design, to training in performance, the skills to produce broadcast quality video.</p>"
     },
     "courses": [
+      {
+        "name": "Video Production",
+        "date": "<i>January 1999 - July 1999</i>",
+        "organisation": "Video Information Project",
+        "location": "Glasgow, United Kingdom",
+        "outcome": "<b>Learned</b> video production in a foundation course with practical training on video production, including workshops on:",
+        "details": [
+          "Lighting, sound recording, camera use, recording formats.", 
+          "Location and studio shooting, reconnaissance, scheduling, logistics.",
+          "Conceptualising, writing and scripts, storyboarding, editing."
+        ]
+      },
+      {
+        "name": "Acting Workshop",
+        "date": "<i>March 1998 - February 1999</i>",
+        "organisation": "The Actor’s Workshop",
+        "location": "Glasgow, United Kingdom",
+        "outcome": "<b>Learned</b> to act in a Meisner technique acting workshop run by <a href=\"https://www.scotlandsartists.com/sales/robert_parsifal_finch\">Robert Parsifal Finch.</a>",
+        "details": [
+          "Imagination, voice and speech, physical training. 3 act play performance.", 
+          "Graduates included <a href=\"https://en.wikipedia.org/wiki/Rory_McCann\">Rory McCann</a>(Sandor Clegane, Game of Thrones)."
+        ]
+      },
       {
         "name": "",
         "date": "",
         "organisation": "",
         "location": "",
-        "outcome": {
-          "html": {}
-        }
+        "outcome": "",
+        "html": []
       }
     ]
   }
