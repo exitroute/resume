@@ -12,7 +12,7 @@ const distPath = "./public";
 
 
 // // clear destination folder
-fse.emptyDirSync(distPath);
+// fse.emptyDirSync(distPath);
 
 // // copy assest folder
 // fse.copy(`${srcPath}/assets`, `${distPath}/assets`);
