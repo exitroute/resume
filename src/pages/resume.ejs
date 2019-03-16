@@ -1,0 +1,334 @@
+<section class="row" id="about">
+  <div class="co1-12 col-md-4 text-md-right">
+    <h2>
+      About
+    </h2>
+  </div>
+  <div class="col-12 col-md-8">
+    <%- site.resume.about.description.html %>
+
+      <dl class="row">
+        <% site.resume.about.overview.forEach((entry) => { %>
+          <dt class="col-4">
+            <%= entry.stage %>
+          </dt>
+          <dd class="col-8">
+            <%= entry.name %>
+              <br>
+              <%= entry.detail %>
+          </dd>
+          <% }); %>
+      </dl>
+  </div>
+</section>
+
+<section id="skills-and-tools">
+
+  <div class="row justify-content-end">
+    <div class="col-1">
+      <nav class="nav justify-content-end">
+        <a class="nav-link" href="#top">
+          <small>top</small>
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="row mt-3 mb-5">
+
+    <div class="co1-12 col-md-4 text-md-right">
+      <h2>
+        Skills and Tools
+      </h2>
+    </div>
+    <div class="col-12 col-md-8">
+
+      <%- site.resume.skillsAndTools.description.html %>
+
+        <div class="row">
+
+          <% site.resume.skillsAndTools.detail.forEach((entry) => { %>
+            <div class="
+              col-6 
+              col-md-4 
+              order-1 
+              order-md-1 
+              my-green-bg 
+              py-3 
+              border 
+              border-white 
+              border 
+              border-white 
+              text-center">
+              <h5 class="
+                font-weight-bold 
+                text-white 
+                text-center">
+                <%= entry.name %>
+              </h5>
+              <% if(entry.descriptors.length > 0) { 
+                 entry.descriptors.forEach((descriptor) => { %>
+                <span class="
+                  d-inline-block 
+                  bg-white 
+                  rounded-left 
+                  rounded-right 
+                  m-1 
+                  p-1">
+                  <%= descriptor %>
+                </span>
+                <% })
+                  } else { %>
+                  <p class="
+                    bg-white
+                    rounded-left 
+                    rounded-right
+                    text-left
+                    m-1 
+                    p-1">
+                    <%- entry.description %>
+                  </p>
+                  <% } %>
+            </div>
+            <%  }); %>
+        </div>
+    </div>
+
+</section>
+
+<section id="recent-work">
+
+  <div class="row justify-content-end">
+    <div class="col-1">
+      <nav class="nav justify-content-end">
+        <a class="nav-link" href="#top">
+          <small>top</small>
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="row mt-3 mb-5">
+
+    <div class="co1-12 col-md-4 text-md-right">
+      <h2>
+        Recent Work
+      </h2>
+      <p class="text-muted">
+        Since July 2016
+      </p>
+    </div>
+
+    <div class="col-12 col-md-8">
+      <%- site.resume.recentWork.description.html %>
+        <div class="row">
+          <div class="col">
+            <div class="accordion" id="recentwork-list">
+              <% site.resume.recentWork.activities.forEach((activity, index) => { %>
+                <div class="card rounded-0">
+                  <div class="card-header my-green-bg" id "<%= activity.id %>">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#<%= activity.id %>Collapse" aria-expanded="<%= index !== 0 ? false : true %>"
+                        aria-controls="<%= activity.id %>Collapse">
+                        <%= activity.name %>
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="<%= activity.id %>Collapse" class="<%= index === 0 ? 'collapse show' : 'collapse' %>" aria-labelledby="<%= activity.id %>"
+                    data-parent="#recentwork-list">
+                    <div class="card-body">
+                      <ul class="list-unstyled">
+                        <% activity.details.forEach((detail) => { %>
+                          <li>
+                            <%- detail.description %>
+                          </li>
+                          <ul class="list-unstyled">
+                            <li>
+                              <i>
+                                <%- detail.date %>
+                              </i>
+                            </li>
+                          </ul>
+                          <% }) %>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <% }); %>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section id="management-experience">
+  <div class="row justify-content-end">
+    <div class="col-1">
+      <nav class="nav justify-content-end">
+        <a class="nav-link" href="#top">
+          <small>top</small>
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="row mt-3 mb-5">
+    <div class="co1-12 col-md-4 text-md-right">
+      <h2>
+        Management Experience
+      </h2>
+      <p class="text-muted">
+        From 2005 until 2016
+      </p>
+    </div>
+    <div class="col-12 col-md-8">
+
+      <% const manExp = site.resume.managementExperience %>
+        <%-manExp.description.html %>
+
+          <div class="row man-exp-row justify-content-center mb-5">
+            <div class="col-sm-2 col-3">
+              <div class="list-group text-center" id="listManExp" role="tablist">
+                <% manExp.chapters.forEach((chapter, index, arr) => { %>
+                  <a class="list-group-item list-group-item-action 
+                  <%= 
+                    index === 0 ? 'rounded-0 active' 
+                    : index === arr.length - 1 ? 'rounded-0'
+                    : '' 
+                  %>" data-toggle="list" href="#<%= chapter.id %>" role="tab">
+                    <%- chapter.name %>
+                  </a>
+                  <% }) %>
+              </div>
+            </div>
+
+            <div class="col-8">
+              <div class="tab-content">
+                <% manExp.chapters.forEach((chapter, index, arr) => { %>
+                  <div class="<%= index === 0 ? 'active' : '' %>  
+                tab-pane 
+                man-exp-text" id="<%= chapter.id %>" role="tabpanel">
+                    <%- chapter.date %>
+                      <%- chapter.position %>
+                        <%-chapter.organisation %>
+                          <%- chapter.location %>
+                            <br />
+                            <hr />
+                            <%- chapter.highlight %>
+                  </div>
+                  <% }) %>
+              </div>
+            </div>
+          </div>
+
+          <h3>Tasks and Responsibilities</h3>
+
+          <div class="accordion" id="listManTasks">
+            <% const tasks = manExp.tasksAndResponsibilities; tasks.forEach((task,
+        index, arr) => { %>
+              <div class="card rounded-0">
+                <div class="card-header my-green-bg" id "<%= task.id %>">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#<%= task.id %>Collapse" aria-expanded="<%= index !== 0 ? false : true %>"
+                      aria-controls="<%= task.id %>Collapse">
+                      <%= task.name %>
+                    </button>
+                  </h5>
+                </div>
+                <div id="<%= task.id %>Collapse" class="<%= index === 0 ? 'collapse show' : 'collapse' %>" aria-labelledby="<%= task.id %>"
+                  data-parent="#listManTasks">
+                  <div class="card-body">
+                    <ul class="list-unstyled">
+                      <% task.details.forEach((detail) => { %>
+                        <li>
+                          <%- detail %>
+                        </li>
+                        <% }) %>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <% }); %>
+          </div>
+    </div>
+</section>
+
+<section id="training-education">
+
+  <div class="row justify-content-end">
+    <div class="col-1">
+      <nav class="nav justify-content-end">
+        <a class="nav-link" href="#top">
+          <small>top</small>
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="row mt-3 mb-5">
+    <div class="co1-12 col-md-4 text-md-right">
+      <h2>
+        Education and Training
+      </h2>
+      <p class="text-muted">
+        The 1990's
+      </p>
+    </div>
+    <div class="col-12 col-md-8">
+      <% const training = site.resume.educationAndTraining %>
+        <% training.description.html %>
+
+          <div class="row">
+            <div class="col">
+              <div class="accordion" id="trainingList">
+                <% training.courses.forEach((course, index, arr) => { %>
+
+                  <div class="card rounded-0">
+                    <div class="card-header my-green-bg my-green-bg" id="<%= course.id %>">
+                      <h5 class="mb-0">
+                        <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#<%= course.id %>Collapse" aria-expanded="<%= index !== 0 ? false : true %>"
+                          aria-controls="<%= course.id %>Collapse">
+                          <%= course.label %>
+                        </button>
+                      </h5>
+                    </div>
+
+                    <div id="<%= course.id %>Collapse" class="<%= index === 0 ? 'collapse show' : 'collapse' %>" aria-labelledby="<%= course.id %>"
+                      data-parent="#trainingList">
+                      <div class="card-body">
+                        <dl class="row">
+                          <dt class="col-4">
+                            <%= course.title %>
+                          </dt>
+                          <dd class="col-8">
+                            <%= course.organisation %>
+                              <br>
+                              <%= course.location %>
+                                <br>
+                                <%- course.date %>
+                          </dd>
+                        </dl>
+                        <ul class="list-unstyled">
+                          <li>
+                            <%- course.outcome %>
+                          </li>
+                          <ul class="small muted">
+                            <% course.details.forEach((detail) => { %>
+                              <li>
+                                <%- detail %>
+                              </li>
+                              <% }) %>
+                          </ul>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <% }) %>
+              </div>
+            </div>
+          </div>
+    </div>
+    <hr>
+  </div>
+</section>

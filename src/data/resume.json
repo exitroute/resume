@@ -103,7 +103,7 @@
         "id": "enterprise",
         "details": [
           {
-            "description": "<b>Founded</b>language training business",
+            "description": "<b>Founded</b> language training business",
             "date": "January 2018 to June 2018"
           },
           {
@@ -264,7 +264,9 @@
     },
     "courses": [
       {
-        "name": "Video Production",
+        "label": "Video Production",
+        "id": "videoProduction",
+        "title": "NVQ Video Production",
         "date": "<i>January 1999 - July 1999</i>",
         "organisation": "Video Information Project",
         "location": "Glasgow, United Kingdom",
@@ -276,7 +278,9 @@
         ]
       },
       {
-        "name": "Acting Workshop",
+        "label": "Acting",
+        "id": "acting",
+        "title": "Acting Workshop",
         "date": "<i>March 1998 - February 1999</i>",
         "organisation": "The Actor’s Workshop",
         "location": "Glasgow, United Kingdom",
@@ -287,12 +291,19 @@
         ]
       },
       {
-        "name": "",
-        "date": "",
-        "organisation": "",
-        "location": "",
-        "outcome": "",
-        "html": []
+        "label": "Architecture",
+        "id": "architecture",
+        "title": "BSc Architecture",
+        "date": "<i>October 1992 - April 1998</i>",
+        "organisation": "University of Strathclyde, Glasgow",
+        "location": "Glasgow, United Kingdom",
+        "outcome": "<b>Studied</b> and practiced building design from the experience and needs of users, clients, stakeholders, and city residents.",
+        "details": [
+          "<b>Completed</b> 20 building design projects use these techniques<br>",
+          "Analysis of assignment, design brief and construction site.",
+          "Conceptualisation, ideation and assessment",
+          "Detailing according to assignments. Finalisation, draughting and presentation."
+        ]
       }
     ]
   }

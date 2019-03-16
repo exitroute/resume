@@ -1,49 +1,67 @@
-<!-- 
-  Jumbotron
-  Hardcoded Name and Subtitle
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">
+      Ryan O'Shea
+    </h1>
+    <p>
+      development, management, design
+    </p>
+    <hr class="my-4" />
+    <blockquote class="blockquote">
+      <p>
+        When you come to a fork in road, take it.
+      </p>
+      <footer class="blockquote-footer">
+        Yogi Berra
+      </footer>
+    </blockquote>
+    <a class="btn my-green-bg btn text-white rounded-0" href="#about" role="button">Learn more</a>
+  </div>
+</div>
 
-  ./resume.json
-    quote
+<main class="container">
+  <section class="main-content">
+    <%- include('./resume') %>
+  </section>
+</main>
 
-  About
-  Hard code heading and subtitle 
-
-  ./resume.json
-    description  
-  # add table later 
--->
-<%- include('./about') %>
-
-<!-- 
-  Skills and Tools 
-  Hard code heading and subtitle 
-  
-  ./resume.json
-    description: String  
-      skillName: String
-      skillDescriptors: Array
-      skillDescription: String 
-
--->
-<%- include('./skillsAndTools') %>
-
-<!-- 
-  Recent Work
-  Hard code heading and subtitle 
-
-  ./resume.json
-    description: String  
-    
-    detailName: String
-    detailDescription: String
-    detailDate: Date
-
--->
-<%- include('./recentWork') %>
-
-<!-- Management Experience -->
-<%- include('./managementExperience') %>
-
-
-<!-- Education and Training -->
-<%- include('./educationAndTraining') %>
+<footer class="bg-light" id="contact">
+  <div class="container">
+    <div class="row justify-content-end">
+      <div class="col-1">
+        <nav class="nav justify-content-end">
+          <a class="nav-link" href="#top">
+            <small>top</small>
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div class="row py-md-5 pb-sm-5 pt-sm-3 pt-0 pb-3">
+      <div class="col-10 offset-2 col-md-4 offset-md-0 text-md-right">
+        <h3>
+          Contact
+        </h3>
+      </div>
+      <div class="col-10 offset-2 offset-md-0 col-md-4 col-lg-3">
+        <address>
+          Fehrbelliner Str. 35
+          <br> 10119 Berlin
+          <br> Germany
+          <br> +49 (0)151 50648881
+          <br>
+          <a href="mailto:ryan.oshea@exitroute.org">ryan.oshea@exitroute.org</a>
+        </address>
+      </div>
+      <div class="col-10 offset-2 offset-md-0 col-md-4">
+        <p>
+          <a href="https://www.linkedin.com/in/ryanjamesoshea/">linkedin.com/ryanjamesoshea</a>
+          <br>
+          <a href="https://www.exitroute.org" target="_blank">www.exitroute.org</a>
+          <br>
+          <a href="https://github.com/exitroute">github.com/exitroute</a>
+          <br>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
