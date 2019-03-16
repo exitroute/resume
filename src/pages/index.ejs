@@ -1,49 +1,24 @@
-<!-- 
-  Jumbotron
-  Hardcoded Name and Subtitle
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">
+      Ryan O'Shea
+    </h1>
+    <p>
+      development, management, design
+    </p>
+    <hr class="my-4" />
+    <blockquote class="blockquote">
+      <p>
+        When you come to a fork in road, take it.
+      </p>
+      <footer class="blockquote-footer">
+        Yogi Berra
+      </footer>
+    </blockquote>
+    <a class="btn my-green-bg btn text-white rounded-0" href="#about" role="button">Learn more</a>
+  </div>
+</div>
 
-  ./resume.json
-    quote
+<%- include('./resume') %>
 
-  About
-  Hard code heading and subtitle 
-
-  ./resume.json
-    description  
-  # add table later 
--->
-<%- include('./about') %>
-
-<!-- 
-  Skills and Tools 
-  Hard code heading and subtitle 
-  
-  ./resume.json
-    description: String  
-      skillName: String
-      skillDescriptors: Array
-      skillDescription: String 
-
--->
-<%- include('./skillsAndTools') %>
-
-<!-- 
-  Recent Work
-  Hard code heading and subtitle 
-
-  ./resume.json
-    description: String  
-    
-    detailName: String
-    detailDescription: String
-    detailDate: Date
-
--->
-<%- include('./recentWork') %>
-
-<!-- Management Experience -->
-<%- include('./managementExperience') %>
-
-
-<!-- Education and Training -->
-<%- include('./educationAndTraining') %>
+<%- include('./footer') %>
