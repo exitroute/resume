@@ -8,7 +8,7 @@ const globP = promisify(require('glob'));
 const config = require('../site.config');
 
 const srcPath = "./src";
-const distPath = "./public";
+const distPath = "./docs";
 
 
 // // clear destination folder
