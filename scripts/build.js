@@ -15,7 +15,7 @@ const distPath = "./docs";
 fse.emptyDirSync(distPath);
 
 // // copy assest folder
-// fse.copy(`${srcPath}/assets`, `${distPath}/assets`);
+fse.copy(`${srcPath}/assets`, `${distPath}/assets`);
 
 
 // read page templates
