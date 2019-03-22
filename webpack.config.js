@@ -6,7 +6,8 @@ module.exports = (env, argv) => {
   return {
     // Define the entry points of our application (can be multiple for different sections of a website)
     entry: {
-      main: "./src/assets/js/index.js"
+      main: "./src/assets/js/index.js",
+      resume: "./src/assets/js/resume.js"
     },
 
     // Define the destination directory and filenames of compiled resources
