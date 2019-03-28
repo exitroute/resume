@@ -1,3 +1,5 @@
+"use strict";
+
 console.log("hello from js")
 require('../scss/style.scss');
 
@@ -10,10 +12,18 @@ require('../scss/style.scss');
 // add form, input and button -> use button as is
 // querySelector to get the form element 
 
-const button = document.querySelector(".btn");
-button.addEventListener("click", (e) => {
-  console.log("requested");
+const button = document.querySelector(".auth-form");
+
+button.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log("token sent");
+  fetch("https://api.chucknorris.io/jokes/random").then(res => res.json())
+    .then(res => {
+      document.querySelector(".resume").textContent = res.value
+    })
 });
+
+
 
 // addEventListener(submit)
 // handleEvent -> console.log() 
