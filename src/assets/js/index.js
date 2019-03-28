@@ -17,7 +17,14 @@ const button = document.querySelector(".auth-form");
 button.addEventListener("submit", (e) => {
   e.preventDefault();
   console.log("token sent");
-  fetch("https://api.chucknorris.io/jokes/random").then(res => res.json())
+  fetch("https://localhost:3000/auth", {
+    method: "POST",
+    body: body,
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer 1888"
+    }
+  }).then(res => res.json())
     .then(res => {
       document.querySelector(".resume").textContent = res.value
     })
