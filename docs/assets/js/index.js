@@ -12,12 +12,19 @@ require('../scss/style.scss');
 // add form, input and button -> use button as is
 // querySelector to get the form element 
 
-const button = document.querySelector(".auth-form");
+const form = document.querySelector(".auth-form");
 
-button.addEventListener("submit", (e) => {
-  e.preventDefault();
+form.addEventListener("submit", (e) => {
+
   console.log("token sent");
-  fetch("https://api.chucknorris.io/jokes/random").then(res => res.json())
+  fetch("https://localhost:3000", {
+    method: "GET",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer 1888"
+    }
+  }).then(res => res.json())
     .then(res => {
       document.querySelector(".resume").textContent = res.value
     })
