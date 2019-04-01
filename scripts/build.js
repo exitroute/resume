@@ -12,10 +12,10 @@ const distPath = "./docs";
 
 
 // // clear destination folder
-fse.emptyDirSync(distPath);
+// fse.emptyDirSync(distPath);
 
 // // copy assest folder
-fse.copy(`${srcPath}/assets`, `${distPath}/assets`);
+// fse.copy(`${srcPath}/assets`, `${distPath}/assets`);
 
 
 // read page templates
