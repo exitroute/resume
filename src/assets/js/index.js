@@ -1,19 +1,11 @@
 "use strict";
-// require("dotenv").config({ path: "./.env" });
 require('../scss/style.scss');
 
 console.log("hello from js")
 
-// this code gets sent to the client a get request is made
-// when button is clicked server.js file logs result
-// 1. create simple server file
+const form = document.querySelector(".auth-form");
 
-// add form, input and button -> use button as is
-// querySelector to get the form element 
-
-const button = document.querySelector(".auth-form");
-
-button.addEventListener("submit", (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
   console.log("token sent");
   fetch(`${process.env.DOMAIN}/auth`, {
@@ -22,17 +14,27 @@ button.addEventListener("submit", (e) => {
       "Content-Type": "application/json",
       "Authorization": `Bearer ${
         new URLSearchParams(window.location.search).get("token")
-      }`
+        }`
     }
   }).then(res => res.json())
     .then(res => {
-      console.log(res);
-      // document.querySelector(".resume").textContent = res.value
+      // call resumeRender with res.resume as argument
+      // document.querySelector(".resume").innerHTML = res.value
+      const html = renderResume(res.payload);
+      console.log(html) 
     })
 });
 
-
-
-// addEventListener(submit)
-// handleEvent -> console.log() 
-// send get request to resume-api 
+function renderResume(resume) {
+  return 
+    `<section class="row mt-5" id="about">
+      <div class="co1-12 col-md-4 text-md-right">
+        <h2>
+          About
+        </h2>
+      </div>
+      <div class="col-12 col-md-8">
+        ${resume.about.description.html}
+      </div>
+    </section>`
+}
