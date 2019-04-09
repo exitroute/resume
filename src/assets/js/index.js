@@ -19,8 +19,8 @@ form.addEventListener("submit", (e) => {
   }).then(res => res.json())
     .then(res => {
       const html = renderResume(res.payload);
-      document.querySelector(".resume").innerHTML = html
-    })
+      document.querySelector(".resume").innerHTML = html;
+    });
 });
 
 function renderResume(resume) {
@@ -302,8 +302,44 @@ function renderResume(resume) {
         </div>
       </section>
     </section>
-  </main>`
+  </main>
+  ${renderFooter(resume.address.html)}`
 };
+
+function renderFooter(address) {
+  return `
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="col-1">
+          <nav class="nav justify-content-end">
+            <a class="nav-link" href="#top">
+              <small>top</small>
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div class="row py-md-5 pb-sm-5 pt-sm-3 pt-0 pb-3">
+        <div class="col-10 offset-2 col-md-4 offset-md-0 text-md-right">
+          <h3>
+            Contact
+          </h3>
+        </div>
+        <div class="col-10 offset-2 offset-md-0 col-md-4 col-lg-3">
+          ${address}
+        </div>
+        <div class="col-10 offset-2 offset-md-0 col-md-4">
+          <p>
+            <a    href="https://www.linkedin.com/in/ryanjamesoshea/">linkedin.com/ryanjamesoshea</a>
+            <br>
+            <a href="https://www.exitroute.org" target="_blank">www.exitroute.org</a>
+            <br>
+            <a href="https://github.com/exitroute">github.com/exitroute</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>`
+  }
 
 function renderNavTop() { 
   return `
