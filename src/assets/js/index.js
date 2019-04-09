@@ -44,6 +44,7 @@ function renderResume(resume) {
           </dl>
         </div>
       </section>
+
         <div class="row justify-content-end">
           <div class="col-1">
             <nav class="nav justify-content-end">
@@ -53,8 +54,10 @@ function renderResume(resume) {
             </nav>
           </div>
         </div>
+      
         <hr>
         <section id="skills-and-tools">
+      
         <div class="row justify-content-end">
           <div class="col-1">
             <nav class="nav justify-content-end">
@@ -64,8 +67,8 @@ function renderResume(resume) {
             </nav>
           </div>
         </div>
-        <div class="row mt-3 mb-5">
 
+        <div class="row mt-3 mb-5">
         <div class="co1-12 col-md-4 text-md-right">
           <h2>
             Skills and Tools
@@ -179,9 +182,11 @@ function renderResume(resume) {
         </nav>
       </div>
     </div>
+    
     <hr>
 
     <section id="management-experience">
+    
     <div class="row justify-content-end">
       <div class="col-1">
         <nav class="nav justify-content-end">
@@ -226,14 +231,15 @@ function renderResume(resume) {
               <div class="tab-content">
                 ${resume.managementExperience.chapters.map(
                   (chapter, index, arr) => { return `
-                  <div class="${index === 0 ? 'active' : ''} tab-pane man-exp-text" 
-                  id="${chapter.id}" role="tabpanel">
-                    ${chapter.date}
-                      ${chapter.position}
-                        ${chapter.organisation}
-                          ${chapter.location}
-                            <br />
-                            <hr />
+                  <div 
+                    class="${index === 0 ? 'active' : ''} tab-pane man-exp-text" 
+                    id="${chapter.id}" role="tabpanel">
+                      ${chapter.date}
+                        ${chapter.position}
+                          ${chapter.organisation}
+                            ${chapter.location}
+                              <br />
+                              <hr />
                             ${chapter.highlight}
                   </div>
                   `}).join("")
@@ -241,6 +247,40 @@ function renderResume(resume) {
               </div>
             </div>
           </div>
+
+          <h3>Tasks and Responsibilities</h3>
+
+          <div class="accordion" id="listManTasks">
+            ${resume.managementExperience.tasksAndResponsibilities.map(
+              (task, index, arr) => { return `
+              <div class="card rounded-0">
+                <div class="card-header rounded-0 my-green-bg" id="${task.id}">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#${task.id}Collapse" aria-expanded="${index !== 0 ? false : true}"
+                      aria-controls="${task.id}Collapse">
+                      ${task.name}
+                    </button>
+                  </h5>
+                </div>
+                <div id="${task.id}Collapse" class="${index === 0 ? 'collapse show' : 'collapse'}" aria-labelledby="${task.id}"
+                  data-parent="#listManTasks">
+                  <div class="card-body">
+                    <ul class="list-unstyled">
+                      ${task.details.map((detail) => { return `
+                        <li>
+                          ${detail}
+                        </li>
+                        `}).join("")
+                        }
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              `}).join("")
+            }
+          </div>
+    </div>
+</section>
 
 
     <!-- end on main content -->
