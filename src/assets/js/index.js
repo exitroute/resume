@@ -180,6 +180,70 @@ function renderResume(resume) {
       </div>
     </div>
     <hr>
+
+    <section id="management-experience">
+    <div class="row justify-content-end">
+      <div class="col-1">
+        <nav class="nav justify-content-end">
+          <a class="nav-link" href="#top">
+            <small>top</small>
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="row mt-3 mb-5">
+    <div class="co1-12 col-md-4 text-md-right">
+      <h2>
+        Management Experience
+      </h2>
+      <p class="text-muted">
+        From 2005 until 2016
+      </p>
+    </div>
+    <div class="col-12 col-md-8">
+
+      ${resume.managementExperience.description.html}
+
+          <div class="row man-exp-row justify-content-center mb-5">
+            <div class="col-sm-2 col-3">
+              <div class="list-group text-center" id="listManExp" role="tablist">
+                ${resume.managementExperience.chapters.map(
+                  (chapter, index, arr) => { return `
+                  <a class="list-group-item list-group-item-action 
+                      ${ index === 0 ? 'rounded-0 active' 
+                        : index === arr.length - 1 ? 'rounded-0'
+                        : '' }" 
+                      data-toggle="list" href="#${chapter.id}" role="tab">
+                    ${chapter.name}
+                  </a>
+                  `}).join("")
+                } 
+              </div>
+            </div>
+
+            <div class="col-8">
+              <div class="tab-content">
+                ${resume.managementExperience.chapters.map(
+                  (chapter, index, arr) => { return `
+                  <div class="${index === 0 ? 'active' : ''} tab-pane man-exp-text" 
+                  id="${chapter.id}" role="tabpanel">
+                    ${chapter.date}
+                      ${chapter.position}
+                        ${chapter.organisation}
+                          ${chapter.location}
+                            <br />
+                            <hr />
+                            ${chapter.highlight}
+                  </div>
+                  `}).join("")
+                }
+              </div>
+            </div>
+          </div>
+
+
+    <!-- end on main content -->
     </section>
   </main>`
 };
