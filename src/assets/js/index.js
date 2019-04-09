@@ -18,10 +18,9 @@ form.addEventListener("submit", (e) => {
     }
   }).then(res => res.json())
     .then(res => {
-      // call resumeRender with res.resume as argument
-      // document.querySelector(".resume").innerHTML = res.value
+      res.payload.about.overview.map(entry => console.log(entry));
       const html = renderResume(res.payload);
-      console.log(html) 
+      document.querySelector(".resume").innerHTML = html
     })
 });
 
