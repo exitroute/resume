@@ -8,6 +8,9 @@ const form = document.querySelector(".auth-form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   console.log("token sent");
+  document.querySelector("div.container > form").setAttribute("class", "d-none");
+  document.querySelector("div.container > hr").setAttribute("class", "d-none");
+  
   fetch(`${process.env.DOMAIN}/auth`, {
     method: "POST",
     headers: {
@@ -18,14 +21,15 @@ form.addEventListener("submit", (e) => {
     }
   }).then(res => res.json())
     .then(res => {
-      const html = renderResume(res.payload);
-      document.querySelector(".resume").innerHTML = html;
+      const resumeData = renderResume(res.payload);
+      const contactData = renderFooter(res.payload);
+      document.querySelector("main.container").innerHTML = resumeData;
+      document.querySelector("#contact").innerHTML = contactData;
     });
 });
 
 function renderResume(resume) {
   return `
-  <main class="container">
     <section class="main-content">
       <section class="row mt-5" id="about">
         <div class="co1-12 col-md-4 text-md-right">
@@ -301,12 +305,10 @@ function renderResume(resume) {
           <hr>
         </div>
       </section>
-    </section>
-  </main>
-  ${renderFooter(resume.address.html)}`
+    </section>`
 };
 
-function renderFooter(address) {
+function renderFooter(resume) {
   return `
     <div class="container">
       <div class="row justify-content-end">
@@ -325,7 +327,7 @@ function renderFooter(address) {
           </h3>
         </div>
         <div class="col-10 offset-2 offset-md-0 col-md-4 col-lg-3">
-          ${address}
+          ${resume.address.html}
         </div>
         <div class="col-10 offset-2 offset-md-0 col-md-4">
           <p>
