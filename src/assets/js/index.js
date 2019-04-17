@@ -6,12 +6,15 @@ console.log("hello from js")
 const form = document.querySelector(".auth-form");
 
 form.addEventListener("submit", (e) => {
+  
   e.preventDefault();
   console.log("token sent");
+  
   document.querySelector("div.container > form").setAttribute("class", "d-none");
   document.querySelector("div.container > hr").setAttribute("class", "d-none");
   
   fetch(`${process.env.DOMAIN}/auth`, {
+  
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -41,7 +44,7 @@ function renderResume(resume) {
             ${resume.about.description.html}  
           <dl class="row">
             ${resume.about.overview.map((entry) => { return `
-            <dt class="col-4">${entry.stage}</dt>
+            <dt class="col-sm-4">${entry.stage}</dt>
             <dd class="col-8">${entry.name}<br>${entry.detail}</dd>`
             }).join("")}
           </dl>
