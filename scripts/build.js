@@ -11,13 +11,6 @@ const srcPath = "./src";
 const distPath = "./docs";
 
 
-// // clear destination folder
-// fse.emptyDirSync(distPath);
-
-// // copy assest folder
-// fse.copy(`${srcPath}/assets`, `${distPath}/assets`);
-
-
 // read page templates
 globP('**/*.ejs', { cwd: `${srcPath}/pages` })
   .then((files) => {
