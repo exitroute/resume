@@ -62,31 +62,33 @@ function renderResume(resume) {
               Skills and Tools
             </h2>
           </div>
-
-          <div class="col-12 col-md-8"> 
-            ${resume.skillsAndTools.description.html}
-            <div class="row">
-              ${resume.skillsAndTools.detail.map((entry) => { return `
-              <div 
-                class="col-6 col-md-4 order-1 order-md-1 my-green-bg py-3  borderborder-white   border border-white text-center">
-                <h5 class="font-weight-bold text-white text-center">
-                  ${entry.name}
-                </h5>
-                ${ entry.descriptors.length > 0 
-                  ? entry.descriptors.map((descriptor) => { return `
-                  <span class="d-inline-block bg-white rounded-left rounded-right m-1p-1">
-                    ${descriptor}
-                  </span>`}).join("") 
-                  : `<p class="bg-white rounded-left rounded-right text-left m-1 p-1">
-                      ${entry.description}
-                    </p>`}
-              </div>`}).join("")}
-            </div>
-          </div>
-        </section>
+          <div class="col-12 col-md-8">
+            ${renderDefintionTable(resume.skillsAndTools.techStack)}
+            ${renderDefintionTable(resume.skillsAndTools.ryanStack)} 
+          </div> 
+        </div>   
+      </section>
 
         ${renderNavNext("recent-work")}    
         <hr>
+
+        <section id="development-experience">
+        ${renderNavTop()}
+        
+          <div class="row mt-3 mb-5">
+            <div class="co1-12 col-md-4 text-md-right">
+              <h2>
+                Development Experience
+              </h2>
+            </div>
+            <div class="col-12 col-md-8">
+              ${renderDefintionTable(resume.developmentExperience.slug)} 
+            </div>    
+          </div>    
+        </section>
+
+      ${renderNavNext("recent-work")}    
+      <hr>        
 
         <section id="recent-work">
         ${renderNavTop()}
@@ -310,6 +312,21 @@ function renderResume(resume) {
       </section>
     </section>`
 };
+
+function renderDefintionTable(item) { return `
+    ${item.description.html}
+    <dl class="row">
+      ${item.details.map((detail) => { return `
+      <dt class="col-sm-4">
+        ${detail.term}
+      </dt>
+      <dd class="col-8">
+        ${detail.definitions.join(", ")}
+      </dd>
+      `}).join("")
+    }
+    </dl>`
+}; 
 
 function renderFooter(resume) {
   return `
