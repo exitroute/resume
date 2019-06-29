@@ -69,23 +69,23 @@ function renderResume(resume) {
         </div>   
       </section>
 
-        ${renderNavNext("recent-work")}    
-        <hr>
+      ${renderNavNext("recent-work")}    
+      <hr>
 
-        <section id="development-experience">
-        ${renderNavTop()}
-        
-          <div class="row mt-3 mb-5">
-            <div class="co1-12 col-md-4 text-md-right">
-              <h2>
-                Development Experience
-              </h2>
-            </div>
-            <div class="col-12 col-md-8">
-              ${renderDefintionTable(resume.developmentExperience.slug)} 
-            </div>    
+      <section id="development-experience">
+      ${renderNavTop()}
+      
+        <div class="row mt-3 mb-5">
+          <div class="co1-12 col-md-4 text-md-right">
+            <h2>
+              Development Experience
+            </h2>
+          </div>
+          <div class="col-12 col-md-8">
+            ${renderDefintionTable(resume.developmentExperience.slug)} 
           </div>    
-        </section>
+        </div>    
+      </section>
 
       ${renderNavNext("recent-work")}    
       <hr>        
@@ -322,6 +322,22 @@ function renderDefintionTable(item) { return `
       </dt>
       <dd class="col-8">
         ${detail.definitions.join(", ")}
+        ${/*
+          if 
+          the elements in the detail.definitions array are strings
+          */
+          /*
+            then 
+              ${detail.definitions.join(", ")}
+            
+            else get 
+              the name 
+                and render in a dt
+              the array of descriptions 
+                and map the array
+                take each descriptor
+                and render it in a dd
+        */""}
       </dd>
       `}).join("")
     }
