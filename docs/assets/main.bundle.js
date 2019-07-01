@@ -112,7 +112,7 @@ form.addEventListener("submit", function (e) {
   document.querySelector("div.container > form").setAttribute("class", "d-none");
   document.querySelector("div.container > hr").setAttribute("class", "d-none");
 
-  fetch("https://resume-api.exitroute.now.sh/auth" + "/auth", {
+  fetch("https://resume-api.exitroute.now.sh" + "/auth", {
 
     method: "POST",
     headers: {
