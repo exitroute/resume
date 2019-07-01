@@ -96,6 +96,8 @@
 "use strict";
 
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 __webpack_require__(/*! ../scss/style.scss */ "./src/assets/scss/style.scss");
 
 console.log("hello from js");
@@ -151,7 +153,9 @@ function renderResume(resume) {
 
 function renderDefintionTable(item) {
   return "\n    " + item.description.html + "\n    <dl class=\"row\">\n      " + item.details.map(function (detail) {
-    return "\n      <dt class=\"col-sm-4\">\n        " + detail.term + "\n      </dt>\n      <dd class=\"col-8\">\n        " + detail.definitions.join(", ") + "\n        " + "\n      </dd>\n      ";
+    return "\n      <dt class=\"col-sm-4\">\n        " + detail.term + "\n      </dt>\n      <dd class=\"col-8\">\n        \n        " + (_typeof(detail.definitions[0]) === "object" ? detail.definitions.map(function (item) {
+      return "\n          <dl>\n            <dt>" + item.name + "</dt>\n            <dd>" + item.description.join(",<br>") + "</dd>\n          </dl>\n          ";
+    }).join("") : detail.definitions.join(", ")) + "\n      </dd>\n      ";
   }).join("") + "\n    </dl>";
 };
 
