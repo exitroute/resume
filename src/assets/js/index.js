@@ -13,7 +13,7 @@ form.addEventListener("submit", (e) => {
   document.querySelector("div.container > form").setAttribute("class", "d-none");
   document.querySelector("div.container > hr").setAttribute("class", "d-none");
   
-  fetch(`${process.env.DOMAIN}/auth`, {
+  fetch(`${process.env.API_URL}/auth`, {
   
     method: "POST",
     headers: {
