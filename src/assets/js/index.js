@@ -321,23 +321,15 @@ function renderDefintionTable(item) { return `
         ${detail.term}
       </dt>
       <dd class="col-8">
-        ${detail.definitions.join(", ")}
-        ${/*
-          if 
-          the elements in the detail.definitions array are strings
-          */
-          /*
-            then 
-              ${detail.definitions.join(", ")}
-            
-            else get 
-              the name 
-                and render in a dt
-              the array of descriptions 
-                and map the array
-                take each descriptor
-                and render it in a dd
-        */""}
+        
+        ${typeof detail.definitions[0] === "object" 
+          ? detail.definitions.map((item) => { return `
+          <dl>
+            <dt>${item.name}</dt>
+            <dd>${item.description.join(",<br>")}</dd>
+          </dl>
+          `}).join("") 
+          : detail.definitions.join(", ")}
       </dd>
       `}).join("")
     }
