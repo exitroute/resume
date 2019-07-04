@@ -57,6 +57,9 @@ A hack would be needed for that :)
 template literals,
 - how decisions made with incomplete knowledge create technical debt
 - how to get data from urls using fetch and simple authentication design
+- **and** how to configure webpack!!! 
+
+That last point made me smile.
 
 ## Status
 
