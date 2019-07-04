@@ -36,6 +36,10 @@ In this latest version the data is retrieved from the API when the button
 is clicked via a fetch command, and a bearer token in the header 
 which is taken from the url.
 
+More details about the API here:
+
+https://github.com/exitroute/resume-api
+
 The url is generated in the API by the user and then sent as part of the 
 application.
 
