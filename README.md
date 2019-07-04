@@ -43,7 +43,7 @@ Here's the url for demo purposes:
 
 https://exitroute.github.io/resume/?token=1973 
 
-Landing on the site without the URL does not deliver the data when requested.
+Landing on the site without this URL does not deliver the data when requested.
 
 A hack would be needed for that :)
 
