@@ -2,7 +2,7 @@
 
 This project was built using the tutorial from Douglas Matoso:
 
-[https://www.webdevdrops.com/build-static-site-generator-nodejs-8969ebe34b22/](Build a static site generator in 40 lines with Node.js)
+[Build a static site generator in 40 lines with Node.js](https://www.webdevdrops.com/build-static-site-generator-nodejs-8969ebe34b22/)
 
 It came at an interesting time in my web development learning.
 
