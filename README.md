@@ -39,6 +39,14 @@ which is taken from the url.
 The url is generated in the API by the user and then sent as part of the 
 application.
 
+Here's the url for demo purposes: 
+
+https://exitroute.github.io/resume/?token=1973 
+
+Landing on the site without the URL does not deliver the data when requested.
+
+A hack would be needed for that :)
+
 ## I Learned About
 
 - server side rendering and templates like ejs, or using javascript and
