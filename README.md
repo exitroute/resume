@@ -47,12 +47,12 @@ Landing on the site without this URL does not deliver the data when requested.
 
 A hack would be needed for that :)
 
-## I Learned About
+## I Learned:
 
-- server side rendering and templates like ejs, or using javascript and
+- about server side rendering and templates like ejs, or using javascript and
 template literals,
 - how decisions made with incomplete knowledge create technical debt
-- getting data from urls and using fetch
+- how to get data from urls using fetch and simple authentication design
 
 ## Status
 
