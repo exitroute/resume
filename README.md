@@ -1,4 +1,4 @@
-#Resume Site
+# Resume Site
 
 This project was built using the tutorial from Douglas Matoso:
 
