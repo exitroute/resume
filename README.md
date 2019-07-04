@@ -24,7 +24,7 @@ One problem I had early was about deciding what should go into the json.
 Putting HTML tags didn't feel right. But as I wanted to get it done I 
 decided to leave that discussion for another day.
 
-## Version Two
+## From Resume Site to Resume App
 
 I wanted to make a resume app that users can configure to send optimised 
 resumes for job applications in a couple of clicks. So that they could 
