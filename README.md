@@ -51,7 +51,7 @@ Landing on the site without this URL does not deliver the data when requested.
 
 A hack would be needed for that :)
 
-## I Learned:
+## Learned:
 
 - about server side rendering and templates like ejs, or using javascript and
 template literals,
