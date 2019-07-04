@@ -1,8 +1,8 @@
-#Resume Site
+# Resume Site
 
 This project was built using the tutorial from Douglas Matoso:
 
-[https://www.webdevdrops.com/build-static-site-generator-nodejs-8969ebe34b22/](Build a static site generator in 40 lines with Node.js)
+[Build a static site generator in 40 lines with Node.js](https://www.webdevdrops.com/build-static-site-generator-nodejs-8969ebe34b22/)
 
 It came at an interesting time in my web development learning.
 
@@ -24,7 +24,7 @@ One problem I had early was about deciding what should go into the json.
 Putting HTML tags didn't feel right. But as I wanted to get it done I 
 decided to leave that discussion for another day.
 
-## Version Two
+## From Resume Site to Resume App
 
 I wanted to make a resume app that users can configure to send optimised 
 resumes for job applications in a couple of clicks. So that they could 
@@ -36,15 +36,30 @@ In this latest version the data is retrieved from the API when the button
 is clicked via a fetch command, and a bearer token in the header 
 which is taken from the url.
 
+More details about the API here:
+
+https://github.com/exitroute/resume-api
+
 The url is generated in the API by the user and then sent as part of the 
 application.
 
-## I Learned About
+Here's the url for demo purposes: 
 
-- server side rendering and templates like ejs, or using javascript and
+https://exitroute.github.io/resume/?token=1973 
+
+Landing on the site without this URL does not deliver the data when requested.
+
+A hack would be needed for that :)
+
+## I Learned:
+
+- about server side rendering and templates like ejs, or using javascript and
 template literals,
 - how decisions made with incomplete knowledge create technical debt
-- getting data from urls and using fetch
+- how to get data from urls using fetch and simple authentication design
+- **and** how to configure webpack!!! 
+
+That last point made me smile.
 
 ## Status
 
