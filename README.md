@@ -48,7 +48,8 @@ template literals,
 
 ## Status
 
-The project is deployed and running with enhancements planned.  
+The project is deployed and running as a very early prototype. Enhancements 
+are planned.  
 
 
 
