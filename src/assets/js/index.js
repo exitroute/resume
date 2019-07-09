@@ -16,6 +16,7 @@ form.addEventListener("submit", (e) => {
   fetch(`${process.env.API_URL}/auth`, {
   
     method: "POST",
+    mode: "no-cors",
     headers: {
       "Content-Type": "application/json",
       "Authorization": `Bearer ${
